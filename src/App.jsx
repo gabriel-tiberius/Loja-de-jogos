@@ -1,35 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {CardProduto}  from './assets/CardProduto'
+import Login from './login.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const produto={
+    nome: 'teste',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque at possimus quo optio dolorum a eaque quibusdam qui laudantium quam rem adipisci, aperiam reprehenderit alias, officia repellendus, soluta hic sed.',
+    preco: 20
 
+  }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <CardProduto produto = {produto}/>
+      <h2> teste dos imports de html</h2>
+      <Login/>
+
+    </div>
   )
 }
 
-export default App
+export default App;
