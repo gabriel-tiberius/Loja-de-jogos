@@ -1,0 +1,8 @@
+.card-body, .card .card-title { /* Espaço entre os textos do card */
+    text-align: center;
+    font-size: 25px;
+}
+
+.container .row .col-md-3 {
+    margin-bottom: 20px;    /* Espaço entre os cards */
+}

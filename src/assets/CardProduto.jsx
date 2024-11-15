@@ -1,23 +1,43 @@
-
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React, { useState, useEffect } from 'react';
+import './CardProduto.css';
 
 
+function CardProduto({ pesquisa }) {
+  
+  const [jogos, setJogos] = useState([]);
 
-function CardProduto({produto}) {
+  useEffect(() => {
+    fetch('../Json/jogos.json')
+      .then(response => response.json())
+      .then(jogos => setJogos(jogos))
+  },[]);
+    
+
+    const jogosFiltrados = jogos.filter((jogo) =>
+      jogo.nome.toLowerCase().includes(pesquisa.toLowerCase()) || 
+      jogo.genero.toLowerCase().includes(pesquisa.toLowerCase())
+    );
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="./imagem/the_witcher.jpg" />
-      <Card.Body>
-        <Card.Title>{produto.nome}</Card.Title>
-        <Card.Text>
-          {produto.text}
-        </Card.Text>
-        <Button variant="primary">{produto.preco}</Button>
-      </Card.Body>
-    </Card>
+    <div className="row">
+      {jogosFiltrados.map((jogo, index) => (
+        <div key={index} className="col-md-3 d-flex justify-content-center mb-4">
+          <a href="jogo.html" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="card" style={{ width: '100%' }} data-bs-theme="dark">
+              <img src={jogo.imagem} className="card-img-top" alt={jogo.nome} />
+              <div className="card-body">
+                <h2 className="card-title">{jogo.nome}</h2>
+                <a className="btn btn-outline-success valor" role="button">
+                  R$ {jogo.preco}
+                </a>
+              </div>
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+
   );
 }
 
-export {CardProduto};
+export default CardProduto;

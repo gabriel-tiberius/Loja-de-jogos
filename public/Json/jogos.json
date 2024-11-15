@@ -1,0 +1,31 @@
+[
+    {
+        "nome": "The Witcher" ,
+        "imagem": "/imagem/the_witcher.jpg",
+        "preco": 200,
+        "descricao": "Apenas um teste para ver como esta funcionando",
+        "genero": "ação",
+        "quantidade_ps4": 0,
+        "quantidade_pc" : 0
+
+    },
+    {
+        "nome": "The Last of us",
+        "imagem": "/imagem/the_last_of_us.jpg",
+        "preco": 150,
+        "descricao": "Apenas um teste para ver como esta funcionando",
+        "genero": "modo historia",
+        "quantidade_ps4": 0,
+        "quantidade_pc" : 0
+    },
+
+    {
+        "nome": "Counter-Strike 2",
+        "imagem": "/imagem/cs2.jpg",
+        "preco": 150000,
+        "descricao": "Apenas um teste para ver como esta funcionando",
+        "genero": "competitivo",
+        "quantidade_ps4": 0,
+        "quantidade_pc" : 0
+    }
+]

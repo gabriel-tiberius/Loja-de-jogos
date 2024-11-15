@@ -1,11 +1,17 @@
 import React from 'react';
+import  {useState, useEffect} from 'react';
 
-function Navbar() {
+
+
+function Navbar({ onSearch }) {
+  const handleSearchChange = (event) => {
+    onSearch(event.target.value); // Passar a pesquisa para o App
+  };
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="index.html">
-          <img src={`${process.env.PUBLIC_URL}/imagem/logo.png`} alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
+          <img src="/public/imagem/logo.png" alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
           Jogo.com
         </a>
         <button
@@ -20,7 +26,7 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
+        
         <div className="collapse navbar-collapse" id="navbarScroll">
           <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{ '--bs-scroll-height': '100px' }}>
             <li className="nav-item">
@@ -48,10 +54,10 @@ function Navbar() {
               </ul>
             </li>
           </ul>
-
-          <div id="pesquisas" style={{ width: 'auto', marginRight: '20px' }}>
+          
+          <div id="pesquisas" style={{ width: 'auto', marginRight: '20px' }}>           {/* parte da pesquisa*/}
             <form className="d-flex" role="search" style={{ marginBottom: '0' }}>
-              <input className="form-control me-2" type="search" placeholder="Procurar jogo" aria-label="Search" />
+              <input className="form-control me-2" type="search" onChange={handleSearchChange} /* passar pesquisa*/ placeholder="Procurar jogo" aria-label="Search" />
               <button className="btn btn-outline-success" type="submit">Buscar</button>
             </form>
           </div>
@@ -59,7 +65,7 @@ function Navbar() {
 
         <div id="entrar" style={{ alignSelf: 'flex-end', flexDirection: 'row' }}>
           <a className="navbar-brand" href="carinho.html">
-            <img src={`${process.env.PUBLIC_URL}/imagem/carinho.png`} alt="Cart" width="30" height="30" className="d-inline-block align-text-top" style={{ marginBottom: '5px' }} />
+            <img src={'/public/imagem/carinho.png'} alt="Cart" width="30" height="30" className="d-inline-block align-text-top" style={{ marginBottom: '5px' }} />
           </a>
 
           <a className="btn btn-outline-success" href="login.html" role="button">Entrar</a>
