@@ -17,6 +17,9 @@ const logRequest = (method, url) => {
     console.log(`[${timestamp}] ${method} request to ${url}`);
 }
 
+// (path.join(__dirname, '..', 'public', 'Json', 'jogos.json') equivale a/Loja-de-jogos/public/Json/jogos.json
+// path.join() usa o caminho dinamicamente  
+
 // Rota para listar jogos
 app.get('/api/jogos', (req, res) => {
     logRequest(req.method, req.url);
