@@ -1,0 +1,13 @@
+#conteinerLogo{
+    display: flex;
+    text-align: center;
+}
+
+#logoNavbar{
+    margin-right: 10px;
+    align-self: center;
+}
+
+#botaoVoltar{
+    border: none;
+}

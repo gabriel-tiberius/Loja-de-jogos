@@ -1,6 +1,8 @@
 import React from 'react';
 import  {useState, useEffect} from 'react';
 
+import '../Style/navbar.css'
+
 
 
 function Navbar({ onSearch }) {
@@ -10,10 +12,10 @@ function Navbar({ onSearch }) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          <img src="/public/imagem/logo.png" alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
+      <a className="navbar-brand" href="/" id='conteinerLogo'>
+          <img src="/public/imagem/logo.png" alt="Logo" width="30" height="30" className="d-inline-block align-text-top" id='logoNavbar'/>
           Jogo.com
-        </a>
+      </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -52,6 +54,10 @@ function Navbar({ onSearch }) {
                 <li><hr className="dropdown-divider" /></li>
                 <li><a className="dropdown-item" href="#">Nintendo</a></li>
               </ul>
+            </li>
+            {/* link da página de gerir jogos */}
+            <li className="nav-item">
+              <a className="nav-link" href="/GerirJogos">Gerir Jogos</a>
             </li>
           </ul>
           

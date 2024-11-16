@@ -1,14 +1,28 @@
 import React from 'react';
 import  {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 
-
+import '../Style/navbarInterna.css'
 
 function NavbarInterna() {
+
+  const navigate = useNavigate();
+
+  const handleVoltar = () => {
+    navigate(-1); // Volta para a última página visitada
+  };
+  
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          <img src="/public/imagem/logo.png" alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
+      <button onClick={handleVoltar} className="btn btn-outline-secondary" id='botaoVoltar'>
+        <i class="bi bi-caret-left-fill"></i> {/* Ícone de seta para a esquerda */}
+      </button>
+
+
+        <a className="navbar-brand" href="/" id='conteinerLogo'>
+          <img src="/public/imagem/logo.png" alt="Logo" width="30" height="30" className="d-inline-block align-text-top" id='logoNavbar'/>
           Jogo.com
         </a>
         <button
