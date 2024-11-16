@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "nome": "The Witcher" ,
         "imagem": "/imagem/the_witcher.jpg",
         "preco": 200,
@@ -10,6 +11,7 @@
 
     },
     {
+        "id": "2",
         "nome": "The Last of us",
         "imagem": "/imagem/the_last_of_us.jpg",
         "preco": 150,
@@ -20,6 +22,7 @@
     },
 
     {
+        "id": "3",
         "nome": "Counter-Strike 2",
         "imagem": "/imagem/cs2.jpg",
         "preco": 150000,
@@ -29,6 +32,7 @@
         "quantidade_pc" : 0
     },
     {
+        "id": "4",
         "nome": "The Witcher" ,
         "imagem": "/imagem/the_witcher.jpg",
         "preco": 200,
@@ -39,6 +43,7 @@
 
     },
     {
+        "id": "5",
         "nome": "The Last of us",
         "imagem": "/imagem/the_last_of_us.jpg",
         "preco": 150,
@@ -49,6 +54,7 @@
     },
 
     {
+        "id": "6",
         "nome": "Counter-Strike 2",
         "imagem": "/imagem/cs2.jpg",
         "preco": 150000,
