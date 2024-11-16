@@ -19,9 +19,9 @@ function CardProduto({ pesquisa }) {
     );
 
   return (
-    <div className="row">
+    <div className="CardsGrid">
       {jogosFiltrados.map((jogo, index) => (
-        <div key={index} className="col-md-3 d-flex justify-content-center mb-4">
+        <div key={index} className="col-md-3 d-flex justify-content-center mb-4" id='card'>
           <a href="jogo.html" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="card" style={{ width: '100%' }} data-bs-theme="dark">
               <img src={jogo.imagem} className="card-img-top" alt={jogo.nome} />

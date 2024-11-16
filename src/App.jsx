@@ -1,29 +1,30 @@
-import CardProduto  from './assets/CardProduto'
 import React from 'react';
-import { useState } from 'react';
-import Navbar from './navbar';
+import Home from './Home';
+import Login from './Login';
+import Cadastro from './Cadastro';
+import { BrowserRouter as Router,
+        Routes,
+        Route,
+        Navigate
+        } from "react-router-dom";
+
 
 
 
 
 function App() {
-                                {/* fazer busca*/}
-  const [pesquisa,setpesquisa] = useState("");
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Navigate to="/" />}/>{/* qualquer url inexistente será tranferida para home*/}
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Cadastro" element={<Cadastro />} />
 
-  const busca = (Texto) =>{
-    setpesquisa(Texto);
-  };
-
-  return(
-    <div>
-      {/* Passa a função de pesquisa para a Navbar */}
-      <Navbar onSearch={busca} />
-      
-      {/* Passa o valor da pesquisa para o CardProduto */}
-      <CardProduto pesquisa={pesquisa} />
-    </div>
+        {/* <Route path="/another" element={<AnotherPage />} /> */}
+      </Routes>
+    </Router>
   );
-
    
 }
 

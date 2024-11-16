@@ -2,7 +2,36 @@
     text-align: center;
     font-size: 25px;
 }
-
-.container .row .col-md-3 {
-    margin-bottom: 20px;    /* Espaço entre os cards */
+.CardsGrid{
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: 55px;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
+.container .row .col-md-3 {
+    margin-bottom: 20px;   /* Espaço entre os cards */
+}
+
+#card{
+    width: auto;
+}
+
+@media (max-width: 1100px) {
+    .CardsGrid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .CardsGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .CardsGrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
