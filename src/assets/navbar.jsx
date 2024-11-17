@@ -30,7 +30,7 @@ function Navbar({ onSearch }) {
         </button>
         
         <div className="collapse navbar-collapse" id="navbarScroll">
-          <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{ '--bs-scroll-height': '100px' }}>
+          <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style={{ '--bs-scroll-height': '300px' }}>
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">Mais Vendidos</a>
             </li>
@@ -51,8 +51,6 @@ function Navbar({ onSearch }) {
                 <li><a className="dropdown-item" href="#">PS5</a></li>
                 <li><hr className="dropdown-divider" /></li>
                 <li><a className="dropdown-item" href="#">Xbox Series X/S</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Nintendo</a></li>
               </ul>
             </li>
             {/* link da página de gerir jogos */}
@@ -70,7 +68,7 @@ function Navbar({ onSearch }) {
         </div>
 
         <div id="entrar" style={{ alignSelf: 'flex-end', flexDirection: 'row' }}>
-          <a className="navbar-brand" href="carinho.html">
+          <a className="navbar-brand" href="/Carinho">
             <img src={'/public/imagem/carinho.png'} alt="Cart" width="30" height="30" className="d-inline-block align-text-top" style={{ marginBottom: '5px' }} />
           </a>
 

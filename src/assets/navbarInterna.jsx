@@ -60,8 +60,6 @@ function NavbarInterna() {
                 <li><a className="dropdown-item" href="#">PS5</a></li>
                 <li><hr className="dropdown-divider" /></li>
                 <li><a className="dropdown-item" href="#">Xbox Series X/S</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Nintendo</a></li>
               </ul>
             </li>
           </ul>
@@ -69,7 +67,7 @@ function NavbarInterna() {
         </div>
 
         <div id="entrar" style={{ alignSelf: 'flex-end', flexDirection: 'row' }}>
-          <a className="navbar-brand" href="carinho.html">
+          <a className="navbar-brand" href="/Carinho">
             <img src={'/public/imagem/carinho.png'} alt="Cart" width="30" height="30" className="d-inline-block align-text-top" style={{ marginBottom: '5px' }} />
           </a>
 

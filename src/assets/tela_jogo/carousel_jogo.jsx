@@ -1,5 +1,5 @@
 import React from 'react';
-import './carousel_jogo.css'
+import '../../Style/Carousel_Jogo.css'
 
 function Carousel_Jogo() {
   return (

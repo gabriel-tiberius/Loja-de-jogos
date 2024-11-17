@@ -9,5 +9,6 @@ Currently, two official plugins are available:
 
 # uso server + frontend
 
-crie um terminal na pasta backend e execute "npm start" ele precisa estar ativo para fazer a leitura dos arquivos
-e crie um terminal em frontend e execute "npm run dev"
+1° passo ----> "npm i" na pasta Loja-de-jogos
+2° passo -----> crie um terminal na pasta backend e execute "npm start" ele precisa estar ativo para fazer a leitura dos arquivos
+3° passoe ----->  crie um terminal em frontend e execute "npm run dev" na pasta Loja-de-jogos

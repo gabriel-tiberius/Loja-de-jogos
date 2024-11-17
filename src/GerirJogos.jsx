@@ -11,6 +11,7 @@ const GerirJogos = () => {
     genero: "",
     quantidade_ps4: 0,
     quantidade_pc: 0,
+    quantidade_xbox: 0,
   });
   const [editarJogoId, setEditarJogoId] = useState(null);
 
@@ -53,6 +54,8 @@ const GerirJogos = () => {
             genero: "",
             quantidade_ps4: 0,
             quantidade_pc: 0,
+            quantidade_XBO: 0,
+
           });
         })
         .catch((error) => console.error("Erro ao atualizar jogo:", error));
@@ -70,6 +73,7 @@ const GerirJogos = () => {
             genero: "",
             quantidade_ps4: 0,
             quantidade_pc: 0,
+            quantidade_xbox: 0,
           });
         })
         .catch((error) => console.error("Erro ao criar jogo:", error));
@@ -186,6 +190,20 @@ const GerirJogos = () => {
               required
             />
           </div>
+
+          <div className="col-md-3 mb-3">
+            <label htmlFor="quantidade_xbox" className="form-label" >Quantidade Xbox</label >
+            <input
+              type="number"
+              id="quantidade_xbox"
+              name="quantidade_xbox"
+              className="form-control"
+              value={novoJogo.quantidade_xbox}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
         </div>
 
         <button type="submit" className="btn btn-primary">
