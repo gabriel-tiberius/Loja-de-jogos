@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+
 const GerirJogos = () => {
   const [jogos, setJogos] = useState([]);
   const [novoJogo, setNovoJogo] = useState({
@@ -210,12 +211,13 @@ const GerirJogos = () => {
           {editarJogoId ? "Atualizar Jogo" : "Adicionar Jogo"}
         </button>
       </form>
+      
 
       {/* Lista de Jogos */}
-      <div className="row">
+      <div className="row" >
         {jogos.map((jogo) => (
           <div className="col-md-4" key={jogo.id}>
-            <div className="card">
+            <div className="card" style={{marginTop:"20px"}}>
               <img src={jogo.imagem} className="card-img-top" alt={jogo.nome} />
               <div className="card-body">
                 <h5 className="card-title">{jogo.nome}</h5>

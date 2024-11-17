@@ -16,8 +16,10 @@ function CardProduto(props) {
     jogo.nome.toLowerCase().includes(props.pesquisa.toLowerCase()) ||
     jogo.genero.toLowerCase().includes(props.pesquisa.toLowerCase())
   );
+  
 
   return (
+
     <div className="CardsGrid">
       {jogosFiltrados.map((jogo, index) => (
         <div key={index} className="col-md-3 d-flex justify-content-center mb-4" id='card'>
@@ -30,6 +32,7 @@ function CardProduto(props) {
                   R$ {jogo.preco}
                 </a>
                 <a
+                  
                   className="btn btn-outline-success valor"
                   role="button"
                   style={{ marginLeft: '15px' }}
@@ -38,6 +41,7 @@ function CardProduto(props) {
                     props.addToCart(jogo); // Chama a função addToCart que foi passada como prop
                   }}
                 >
+                  
                   <img src={'./imagem/carinho.png'} alt="Cart" width="25" height="25" />
                 </a>
               </div>
@@ -46,6 +50,7 @@ function CardProduto(props) {
         </div>
       ))}
     </div>
+   
   );
 }
 

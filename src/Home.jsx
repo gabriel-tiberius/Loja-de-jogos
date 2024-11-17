@@ -4,8 +4,10 @@ import Carousel from "./assets/carouselPrincipal";
 import CardProduto from './assets/CardProduto';
 import './Style/Home.css';
 
+
 function Home() {
   const [pesquisa, setPesquisa] = useState("");
+
   const [carrinho, setCarrinho] = useState(() => {
     // Carregar o carrinho do localStorage ou iniciar com um carrinho vazio
     const carrinhoSalvo = JSON.parse(localStorage.getItem('carrinho'));
@@ -19,7 +21,7 @@ function Home() {
 
   // Função de adicionar ao carrinho
   const addToCart = (jogo) => {
-    // Atualiza o carrinho no estado
+    
     setCarrinho((prevCarrinho) => {
       const novoCarrinho = [...prevCarrinho, jogo];
       // Atualiza o localStorage sempre que o carrinho mudar
