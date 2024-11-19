@@ -67,7 +67,7 @@ function NavbarInterna() {
         </div>
 
         <div id="entrar" style={{ alignSelf: 'flex-end', flexDirection: 'row' }}>
-          <a className="navbar-brand" href="/Carinho">
+          <a className="navbar-brand" href="/Carrinho">
             <img src={'/public/imagem/carinho.png'} alt="Cart" width="30" height="30" className="d-inline-block align-text-top" style={{ marginBottom: '5px' }} />
           </a>
 

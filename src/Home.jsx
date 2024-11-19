@@ -3,9 +3,20 @@ import Navbar from './assets/navbar';
 import Carousel from "./assets/carouselPrincipal";
 import CardProduto from './assets/CardProduto';
 import './Style/Home.css';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 
 function Home() {
+  
+  function notify() {
+    toast.success("Jogo adicionado no carrinho!", {
+      position: "top-center", 
+      autoClose: 2500, 
+      theme: "dark", 
+    });
+  }
+
   const [pesquisa, setPesquisa] = useState("");
 
   const [carrinho, setCarrinho] = useState(() => {
@@ -26,6 +37,7 @@ function Home() {
       const novoCarrinho = [...prevCarrinho, jogo];
       // Atualiza o localStorage sempre que o carrinho mudar
       localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
+      notify()
       return novoCarrinho;
     });
   };
@@ -36,6 +48,7 @@ function Home() {
       <Carousel />
       {/* Passando a função addToCart como prop para CardProduto */}
       <CardProduto pesquisa={pesquisa} addToCart={addToCart} />
+      <ToastContainer />
     </div>
   );
 }

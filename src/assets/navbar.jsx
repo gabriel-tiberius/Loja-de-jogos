@@ -61,13 +61,12 @@ function Navbar({ onSearch }) {
           <div id="pesquisas" style={{ width: 'auto', marginRight: '20px' }}>           {/* parte da pesquisa*/}
             <form className="d-flex" role="search" style={{ marginBottom: '0' }}>
               <input className="form-control me-2" type="search" onChange={handleSearchChange} /* passar pesquisa*/ placeholder="Procurar jogo" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Buscar</button>
             </form>
           </div>
         </div>
 
         <div id="entrar" style={{ alignSelf: 'flex-end', flexDirection: 'row' }}>
-          <a className="navbar-brand" href="/Carinho">
+          <a className="navbar-brand" href="/Carrinho">
             <img src={'/public/imagem/carinho.png'} alt="Cart" width="30" height="30" className="d-inline-block align-text-top" style={{ marginBottom: '5px' }} />
           </a>
 

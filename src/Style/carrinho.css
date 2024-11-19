@@ -19,16 +19,31 @@ h1{
     vertical-align: middle ;
 }
 
+#carrinho-vazio {
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
 #valortotal{
     width: 250px;
     margin: auto;
 
 }
+#botaopagamento{
+  font-size: 20px;
+}
+
+.pagamento{
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
   /* Oculta coluna*/
 @media (max-width: 650px) {
     #colunafoto, #colunaimagem{
-      display: none; /* Esconde a colunas imagem */
+      display: none; /* Esconde a colunas imagem  para funcionar em celular*/
     }
   }
   
