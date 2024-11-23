@@ -31,13 +31,13 @@ const Carousel = () => {
       {/* Slides */}
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="../imagem/CS2_banner.jpg" className="d-block w-100" alt="Slide 1" />
+          <img src="../imagem/cs2.jpg" className="d-block w-100" alt="Slide 1" />
         </div>
         <div className="carousel-item">
-          <img src="../imagem/the_last_of_us_banner.jpg" className="d-block w-100" alt="Slide 2" />
+          <img src="../imagem/the_last_of_us_carousel.jpg" className="d-block w-100" alt="Slide 2" />
         </div>
         <div className="carousel-item">
-          <img src="../imagem/the_witche_banner.jpg" className="d-block w-100" alt="Slide 3" />
+          <img src="../imagem/the_witcher.jpg" className="d-block w-100" alt="Slide 3" />
         </div>
       </div>
 
