@@ -27,7 +27,7 @@ max-width: calc(25% - 1rem); /* Tamanho máximo igual a 25% */
 box-sizing: border-box; /* Inclui padding/borda no tamanho total */
 }
 
-.genero-separador {
+.genero-separa {
 margin: 2rem;
 border: 1px solid #ddd;
 }

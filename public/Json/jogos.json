@@ -6,9 +6,9 @@
     "preco": 200,
     "descricao": "Apenas um teste para ver como esta funcionando",
     "genero": "ação",
-    "quantidade_ps4": "10",
-    "quantidade_pc": "10",
-    "quantidade_xbox": "10"
+    "quantidade_ps4": 10,
+    "quantidade_pc": 10,
+    "quantidade_xbox": 10
   },
   {
     "id": "3",
@@ -17,7 +17,7 @@
     "preco": 150000,
     "descricao": "Apenas um teste para ver como esta funcionando",
     "genero": "competitivo",
-    "quantidade_ps4": 0,
+    "quantidade_ps4": 10,
     "quantidade_pc": 0
   },
   {
@@ -37,8 +37,8 @@
     "preco": 150,
     "descricao": "Apenas um teste para ver como esta funcionando",
     "genero": "modo historia",
-    "quantidade_ps4": 0,
-    "quantidade_pc": 0
+    "quantidade_ps4": 10,
+    "quantidade_pc": 10
   },
   {
     "nome": "The Witcher",

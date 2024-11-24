@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavbarInterna from './assets/navbarInterna';
 import './Style/carrinho.css';
 
-function Carinho() {
+function Carrinho() {
   const [itensCarrinho, setItensCarrinho] = useState([]);
 
   useEffect(() => {
@@ -12,18 +12,25 @@ function Carinho() {
     }
   }, []);
 
-  const handleRemove = (index) => {
+  const handleRemover = (index) => {
     const newCarrinho = itensCarrinho.filter((_, i) => i !== index);
     setItensCarrinho(newCarrinho);
     localStorage.setItem('carrinho', JSON.stringify(newCarrinho)); // Atualiza o localStorage
   };
 
-  const handleQuantityChange = (index, quantity) => {
+  const handlequantidade = (index, quantity) => {
     const updatedCarrinho = [...itensCarrinho];
     updatedCarrinho[index].quantidade = quantity; // Atualiza a quantidade no estado
     setItensCarrinho(updatedCarrinho);
     localStorage.setItem('carrinho', JSON.stringify(updatedCarrinho)); // Atualiza o localStorage
   };
+
+  const handlplataforma = (index, plataforma) =>{
+    const updatedCarrinho = [...itensCarrinho];
+    updatedCarrinho[index].plataforma = plataforma; // Atualiza a plataforma
+    setItensCarrinho(updatedCarrinho);
+    localStorage.setItem('carrinho', JSON.stringify(updatedCarrinho));
+  }
 
   return (
     <div>
@@ -47,7 +54,7 @@ function Carinho() {
               {itensCarrinho.length === 0 ? (
                 <tr>
                   <td colSpan="6" id ="carrinho-vazio">
-                  Ainda não a itens no seu carrinho!!
+                  Ainda não há itens no seu carrinho!!
                   </td>
                 </tr>
               ) : (
@@ -55,18 +62,28 @@ function Carinho() {
                   <tr key={index}>
                     <td id="colunaimagem"><img src={item.imagem} alt={item.nome} width="50" /></td>
                     <td id="colunanome">{item.nome}</td>
-                    <td id="colunaplataforma">{item.plataforma}</td>
+                    <td id="colunaplataforma">
+                      {item.plataforma ? (item.plataforma) : (    // verifica se existe plataforma definida
+                        <select onChange={(e) => handlplataforma(index,(e.target.value))} defaultValue="" // chama a função que add a plataforma no local localStorage
+                        >
+                          <option value="" disabled>Escolha</option>
+                          {item.quantidade_ps4 > 0 && <option value="PS4">PS4</option>}
+                          {item.quantidade_xbox > 0 && <option value="Xbox">Xbox</option>}
+                          {item.quantidade_pc > 0 && <option value="PC">PC</option>}
+                        </select>
+                      )}
+                    </td>
                     <td id="colunaquantidade">
                       <input
                         id="colunaquantidade2"
                         type="number"
                         min="1"
                         value={item.quantidade || 1}
-                        onChange={(e) => handleQuantityChange(index, parseInt(e.target.value))}
+                        onChange={(e) => handlequantidade(index, parseInt(e.target.value))}
                       />
                     </td>
                     <td id="colunapreco">R$ {(item.preco * (item.quantidade || 1)).toFixed(2)}</td>
-                    <td id="colunaexcluir"><button onClick={() => handleRemove(index)}>Excluir</button></td>
+                    <td id="colunaexcluir"><button onClick={() => handleRemover(index)}>Excluir</button></td>
                   </tr>
                 ))
               )}
@@ -96,4 +113,4 @@ function Carinho() {
   );
 }
 
-export default Carinho;
+export default Carrinho;
