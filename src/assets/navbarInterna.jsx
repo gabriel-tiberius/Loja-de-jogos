@@ -44,7 +44,7 @@ function NavbarInterna() {
               <a className="nav-link active" aria-current="page" href="#">Mais Vendidos</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Jogos para PC</a>
+              <a className="nav-link" href="/JogoPc">Jogos para PC</a>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -57,9 +57,9 @@ function NavbarInterna() {
                 Jogos para Console
               </a>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">PS5</a></li>
+                <li><a className="dropdown-item" href="/JogoPs5">PS5</a></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">Xbox Series X/S</a></li>
+                <li><a className="dropdown-item" href="JogoXbox">Xbox Series X/S</a></li>
               </ul>
             </li>
           </ul>

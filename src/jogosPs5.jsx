@@ -1,16 +1,9 @@
+import Navbar from "./assets/navbar";
 import React, { useState, useEffect } from "react";
-import Navbar from './assets/navbar';
-import Carousel from "./assets/carouselPrincipal";
 import CardProduto from './assets/CardProduto';
-import './Style/Home.css';
 import { ToastContainer, toast } from 'react-toastify';
 
-
-
-function Home() {
-
-  
-  
+function JogosPs5() {
   function notify() {
     toast.success("Jogo adicionado no carrinho!", {
       position: "top-center", 
@@ -18,9 +11,9 @@ function Home() {
       theme: "dark", 
     });
   }
-  const [plataforma, setPlataforma] = useState("todos");   // define qual plataforma vai ser mostrada na tela
 
   const [pesquisa, setPesquisa] = useState("");
+  const [plataforma, setPlataforma] = useState("ps5"); // define qual plataforma sera mostrado na pagina
 
   const [carrinho, setCarrinho] = useState(() => {
     // Carregar o carrinho do localStorage ou iniciar com um carrinho vazio
@@ -35,27 +28,28 @@ function Home() {
 
   // Função de adicionar ao carrinho
   const addToCart = (jogo) => {
-    
     setCarrinho((prevCarrinho) => {
       const novoCarrinho = [...prevCarrinho, jogo];
       // Atualiza o localStorage sempre que o carrinho mudar
       localStorage.setItem('carrinho', JSON.stringify(novoCarrinho));
-      notify()
+      notify();
       return novoCarrinho;
     });
   };
 
   return (
-    <div id="HomeConteiner">
+    <div id="JogoPcConteiner">
       <Navbar onSearch={busca} />
-      <Carousel />
-      {/* Passando a função addToCart como prop para CardProduto */}
-      <CardProduto pesquisa={pesquisa} addToCart={addToCart} 
-      plataforma= {plataforma} // passa plataforma como parametro
+      <h1 style={{ fontSize: '35px', fontWeight: 'bold', textAlign: 'center' }}>Jogos para PS5</h1>
+      {/* Passando a plataforma como prop para CardProduto */}
+      <CardProduto 
+        pesquisa={pesquisa} 
+        addToCart={addToCart} 
+        plataforma={plataforma} // Passando plataforma como parametro
       />
       <ToastContainer />
     </div>
   );
 }
 
-export default Home;
+export default JogosPs5;

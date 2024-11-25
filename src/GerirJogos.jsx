@@ -10,7 +10,7 @@ const GerirJogos = () => {
     preco: "",
     descricao: "",
     genero: "",
-    quantidade_ps4: 0,
+    quantidade_ps5: 0,
     quantidade_pc: 0,
     quantidade_xbox: 0,
   });
@@ -53,9 +53,9 @@ const GerirJogos = () => {
             preco: "",
             descricao: "",
             genero: "",
-            quantidade_ps4: 0,
+            quantidade_ps5: '',
             quantidade_pc: 0,
-            quantidade_XBO: 0,
+            quantidade_xbox: 0,
 
           });
         })
@@ -72,7 +72,7 @@ const GerirJogos = () => {
             preco: "",
             descricao: "",
             genero: "",
-            quantidade_ps4: 0,
+            quantidade_ps5: 0,
             quantidade_pc: 0,
             quantidade_xbox: 0,
           });
@@ -168,13 +168,13 @@ const GerirJogos = () => {
             />
           </div>
           <div className="col-md-3 mb-3">
-            <label htmlFor="quantidade_ps4" className="form-label">Quantidade PS4</label>
+            <label htmlFor="quantidade_ps5" className="form-label">Quantidade PS5</label>
             <input
               type="number"
-              id="quantidade_ps4"
-              name="quantidade_ps4"
+              id="quantidade_ps5"
+              name="quantidade_ps5"
               className="form-control"
-              value={novoJogo.quantidade_ps4}
+              value={novoJogo.quantidade_ps5}
               onChange={handleChange}
               required
             />

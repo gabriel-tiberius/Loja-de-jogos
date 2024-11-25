@@ -67,7 +67,7 @@ function Carrinho() {
                         <select onChange={(e) => handlplataforma(index,(e.target.value))} defaultValue="" // chama a função que add a plataforma no local localStorage
                         >
                           <option value="" disabled>Escolha</option>
-                          {item.quantidade_ps4 > 0 && <option value="PS4">PS4</option>}
+                          {item.quantidade_ps4 > 0 && <option value="PS5">PS5</option>}
                           {item.quantidade_xbox > 0 && <option value="Xbox">Xbox</option>}
                           {item.quantidade_pc > 0 && <option value="PC">PC</option>}
                         </select>

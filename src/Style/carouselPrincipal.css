@@ -8,6 +8,9 @@
     margin-right: 10%;
     margin-bottom: 35px
 }
+.carousel-item {
+  height: 400px;
+}
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -17,9 +20,7 @@
     
 }
 
-  .carousel-item {
-    height: 400px;
-  }
+ 
   
   .carousel-item img {
     height: 100%; /* Faz a imagem ocupar toda a altura */
@@ -35,8 +36,7 @@
       margin-top: 10px;
       margin-left: 10%;
       margin-right: 10%;
-      
   }
-
+  
   }
   

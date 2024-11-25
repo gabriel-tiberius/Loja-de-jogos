@@ -1,24 +1,13 @@
 [
   {
-    "id": "1",
-    "nome": "The Witcher",
-    "imagem": "/imagem/the_witcher.jpg",
-    "preco": 200,
-    "descricao": "Apenas um teste para ver como esta funcionando",
-    "genero": "ação",
-    "quantidade_ps4": 10,
-    "quantidade_pc": 10,
-    "quantidade_xbox": 10
-  },
-  {
     "id": "3",
     "nome": "Counter-Strike 2",
     "imagem": "/imagem/cs2.jpg",
     "preco": 150000,
     "descricao": "Apenas um teste para ver como esta funcionando",
     "genero": "competitivo",
-    "quantidade_ps4": 10,
-    "quantidade_pc": 0
+    "quantidade_ps5": 0,
+    "quantidade_pc": 10
   },
   {
     "id": "4",
@@ -27,7 +16,7 @@
     "preco": 200,
     "descricao": "Apenas um teste para ver como esta funcionando",
     "genero": "ação",
-    "quantidade_ps4": "10",
+    "quantidade_ps5": 10,
     "quantidade_pc": 0
   },
   {
@@ -37,7 +26,7 @@
     "preco": 150,
     "descricao": "Apenas um teste para ver como esta funcionando",
     "genero": "modo historia",
-    "quantidade_ps4": 10,
+    "quantidade_ps5": 10,
     "quantidade_pc": 10
   },
   {
@@ -46,7 +35,7 @@
     "preco": "500",
     "descricao": "testeeeee",
     "genero": "ação",
-    "quantidade_ps4": 0,
+    "quantidade_ps5": 0,
     "quantidade_pc": 0,
     "quantidade_xbox": 0
   },
@@ -56,8 +45,38 @@
     "preco": "500",
     "descricao": "testeee",
     "genero": "ação",
-    "quantidade_ps4": 0,
+    "quantidade_ps5": 0,
     "quantidade_pc": 0,
     "quantidade_xbox": 0
+  },
+  {
+    "nome": "GTA VI",
+    "imagem": "/imagem/gta6.jpg",
+    "preco": "1000000",
+    "descricao": "Lançamento exclusivo da jogo.com",
+    "genero": "aventura",
+    "quantidade_ps5": "100",
+    "quantidade_pc": "0",
+    "quantidade_xbox": "100"
+  },
+  {
+    "nome": "GTA VI",
+    "imagem": "/imagem/gta6.jpg",
+    "preco": "1000000",
+    "descricao": "Lançamento exclusivo jogo.com",
+    "genero": "aventura",
+    "quantidade_ps5": 0,
+    "quantidade_pc": 0,
+    "quantidade_xbox": 0
+  },
+  {
+    "nome": "GTA VI",
+    "imagem": "/imagem/gta6.jpg",
+    "preco": "1000000",
+    "descricao": "Lançamento exclusivo da jogo.com",
+    "genero": "aventura",
+    "quantidade_ps5": "100",
+    "quantidade_pc": "0",
+    "quantidade_xbox": "100"
   }
 ]

@@ -12,20 +12,24 @@ function CardProduto(props) {
       .then((jogos) => setJogos(jogos));
   }, []);
 
-  // Filtrar jogos com base na pesquisa
+  // Filtrar jogos com base na pesquisa e na plataforma
   const jogosFiltrados = jogos.filter(
     (jogo) =>
-      jogo.nome.toLowerCase().includes(props.pesquisa.toLowerCase()) ||
-      jogo.genero.toLowerCase().includes(props.pesquisa.toLowerCase())
+      (jogo.nome.toLowerCase().includes(props.pesquisa.toLowerCase()) ||
+        jogo.genero.toLowerCase().includes(props.pesquisa.toLowerCase())) &&
+      ((props.plataforma === "todos") ||
+        (props.plataforma === "pc" && jogo.quantidade_pc > 0) ||
+        (props.plataforma === "ps5" && jogo.quantidade_ps5 > 0) ||
+        (props.plataforma === "xbox" && jogo.quantidade_xbox > 0))
   );
 
   // Agrupar jogos por gênero
   const jogosPorGenero = jogosFiltrados.reduce((grupo_jogos, jogo) => {     
     const genero = jogo.genero || "Outros"; // Gênero padrão se estiver ausente
-    if (!grupo_jogos[genero]) {   // teste se o genero ja existe em grupo_jogo
+    if (!grupo_jogos[genero]) {   // teste se o genero já existe em grupo_jogo
       grupo_jogos[genero] = [];
     }
-    grupo_jogos[genero].push(jogo); // adiciona o jogo ao array do seu genero
+    grupo_jogos[genero].push(jogo); // adiciona o jogo ao array do seu gênero
     return grupo_jogos;
   }, {});
 
@@ -43,15 +47,15 @@ function CardProduto(props) {
                 >
                   <div className="card" data-bs-theme="dark">
                     <img
-                      src={jogo.imagem}className="card-img-top"alt={jogo.nome}/>
+                      src={jogo.imagem} className="card-img-top" alt={jogo.nome}/>
                     <div className="card-body"><h2 className="card-title">{jogo.nome}</h2>
                       <a
-                        className="btn btn-outline-success valor"role="button"style={{ marginRight: "15px" }}
+                        className="btn btn-outline-success valor" role="button" style={{ marginRight: "15px" }}
                       >
                         R$ {jogo.preco}
                       </a>
                       <a
-                        className="btn btn-outline-success valor"role="button"style={{ marginLeft: "15px" }}
+                        className="btn btn-outline-success valor" role="button" style={{ marginLeft: "15px" }}
                         onClick={(e) => {
                           e.preventDefault();
                           props.addToCart(jogo); // Chama a função addToCart que foi passada como prop
