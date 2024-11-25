@@ -50,12 +50,12 @@ function CardProduto(props) {
                       src={jogo.imagem} className="card-img-top" alt={jogo.nome}/>
                     <div className="card-body"><h2 className="card-title">{jogo.nome}</h2>
                       <a
-                        className="btn btn-outline-success valor" role="button" style={{ marginRight: "15px" }}
+                        className="btn btn-danger" role="button" style={{ marginRight: "15px" }}
                       >
                         R$ {jogo.preco}
                       </a>
                       <a
-                        className="btn btn-outline-success valor" role="button" style={{ marginLeft: "15px" }}
+                        className="btn btn-danger" role="button" style={{ marginLeft: "15px" }}
                         onClick={(e) => {
                           e.preventDefault();
                           props.addToCart(jogo); // Chama a função addToCart que foi passada como prop

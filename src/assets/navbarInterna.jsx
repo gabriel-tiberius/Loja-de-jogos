@@ -62,6 +62,9 @@ function NavbarInterna() {
                 <li><a className="dropdown-item" href="JogoXbox">Xbox Series X/S</a></li>
               </ul>
             </li>
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="/PerfilUsuario">TESTE_PERFIL</a>
+            </li>
           </ul>
           
         </div>

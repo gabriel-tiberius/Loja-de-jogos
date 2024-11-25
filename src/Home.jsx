@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from './assets/navbar';
 import Carousel from "./assets/carouselPrincipal";
 import CardProduto from './assets/CardProduto';
+
+
 import './Style/Home.css';
 import { ToastContainer, toast } from 'react-toastify';
 

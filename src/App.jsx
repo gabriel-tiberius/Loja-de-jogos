@@ -7,6 +7,7 @@ import Carrinho from './carrinho';
 import JogosPc from './jogosPc';
 import JogosXbox from './jogosxbox';
 import JogosPs5 from './jogosPs5';
+import PerfilUsuario from './assets/PerfilUsuario';
 import { BrowserRouter as Router,
         Routes,
         Route,
@@ -32,6 +33,7 @@ function App() {
         <Route path="/JogoPc" element={<JogosPc/>}/>
         <Route path="/JogoXbox" element={<JogosXbox/>}/>
         <Route path="/JogoPs5" element={<JogosPs5/>}/>
+        <Route path="/PerfilUsuario" element={<PerfilUsuario/>}/>
 
         {/* <Route path="/another" element={<AnotherPage />} /> */}
       </Routes>
