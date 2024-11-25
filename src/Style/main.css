@@ -113,7 +113,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 50));*/
 
 /* Altera o card-body */
 .card-body{
-  background-color: hsl(235, 60%, 8%) !important;
+  background-color: hsl(235, 60%, 8%);
 }
 
 
@@ -127,7 +127,7 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 50));*/
 
 /* Altera o text-center */
 .text-center{
-  color:white
+  color:white !important;
 }
 
 
@@ -137,6 +137,13 @@ filter: drop-shadow(0 0 10px rgba(0, 0, 0, 50));*/
 .form-label{
   color:white
 }
+
+
+
+
+
+
+
 
 
 

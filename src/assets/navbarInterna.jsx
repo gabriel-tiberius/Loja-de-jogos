@@ -14,7 +14,7 @@ function NavbarInterna() {
   
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
       <div className="container-fluid">
       <button onClick={handleVoltar} className="btn btn-outline-secondary" id='botaoVoltar'>
         <i class="bi bi-caret-left-fill"></i> {/* Ícone de seta para a esquerda */}
