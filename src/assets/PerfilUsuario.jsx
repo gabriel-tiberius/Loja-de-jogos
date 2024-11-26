@@ -4,6 +4,8 @@ import "../Style/main.css";
 import "../Style/navbarInterna.css";
 
 
+/* Vou botar esse jsx na pasta correta */
+
 function PerfilUsuario() {
   return (
     <>
